@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/topGuidLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.12"></androidx.constraintlayout.widget.Guideline>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33"></androidx.constraintlayout.widget.Guideline>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.66"></androidx.constraintlayout.widget.Guideline>
+
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="@dimen/_62ssp"
+                android:layout_height="@dimen/_62ssp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/topGuidLine"></ImageView>
+
+            <TextView
+                android:id="@+id/signInTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7ssp"
+
+                android:text="Welcome Again"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/appLogo"></TextView>
+
+            <TextView
+                android:id="@+id/welcomeBackTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome back"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/signInTxt"></TextView>
+
+            <EditText
+                android:id="@+id/emailAddress"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_21ssp"
+                android:layout_marginTop="@dimen/_20ssp"
+                android:background="@drawable/pincode_drawable"
+                android:drawableLeft="@drawable/email_drawable"
+                android:drawablePadding="@dimen/_3ssp"
+                android:hint="@string/emailAddressTxt"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/signInTxt"></EditText>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_21ssp"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:background="@drawable/pincode_drawable"
+                android:drawableLeft="@drawable/password_drawable"
+                android:drawablePadding="@dimen/_3ssp"
+                android:hint="@string/passwordTxt"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:paddingStart="@dimen/_4ssp"
+                android:singleLine="true"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/emailAddress"></EditText>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_21ssp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:background="@drawable/btn_drawable"
+                android:text="@string/loginTxt"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/password"></androidx.appcompat.widget.AppCompatButton>
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2ssp"
+                android:paddingHorizontal="@dimen/_2ssp"
+                android:paddingVertical="@dimen/_2ssp"
+                android:text="@string/forgotPasswordTxt"
+                android:textColor="@color/blueTextColor"
+                app:layout_constraintEnd_toStartOf="@id/endGuideLine"
+                app:layout_constraintStart_toEndOf="@id/startGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/loginBtn"></TextView>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_40ssp"
+                android:layout_height="@dimen/_40ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
