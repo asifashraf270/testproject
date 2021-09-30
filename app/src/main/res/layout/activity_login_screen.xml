@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_7ssp"
-
+                android:fontFamily="@font/roboto_bold"
                 android:text="Welcome Again"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp"
@@ -120,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_2ssp"
+                android:fontFamily="@font/roboto_regular"
                 android:paddingHorizontal="@dimen/_2ssp"
                 android:paddingVertical="@dimen/_2ssp"
                 android:text="@string/forgotPasswordTxt"
